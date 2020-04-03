@@ -1,0 +1,146 @@
+.baner{                               /* HEDER */
+  display: block;
+  min-width: 1230px;
+  min-height: 1000px;
+  background-image: url(../images/baner.jpg);    /* путь к картинке */   
+  background-size: cover;                        /* растянуть по контенту */                            
+  background-position: center;                   /* расположить по центру */            
+  background-repeat: no-repeat;                  /* запретить повторение картинки */
+}
+
+.header{
+  padding: 0 15px;                                /* отображение контенера с отступом по бокам */           
+  width: 1200px;                                  /* ширина  контейнера */
+  margin: 0 auto;                                 /* по  вертикали  ноль  по  ширине  авто  */
+
+  &__wrapper{
+    display: flex; 
+    justify-content: space-between;               /* растянуть */ 
+    padding-bottom: 127px;
+  }
+
+  &__logo{
+    padding-top: 25px;
+  }
+
+  &__menu{
+    padding-top: 39px;
+  }
+
+  &__title{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 850px;
+    text-align: center;
+    font-size: $fonts-heder-title;                /* выбираем  размер  для  шрифта */
+    line-height: 142px;                           /*  размер  строковой  линии  */
+    font-family: 'Kaushan Script';
+    font-weight: 400;
+    color: $color-header-title;                   /* указываем  цвет  для  шрифта */
+    margin: auto;
+  }
+
+  &__subtitle{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 850px;
+    text-align: center;
+    font-size: $fonts-heder-subtitle;             /* выбираем  размер  для  шрифта */
+    line-height: 150px;                           /*  размер  строковой  линии  */
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: $color-header-subtitle;                /* указываем  цвет  для  шрифта */
+    text-transform: uppercase ;                   /*  зделать  текст  с  большой  буквой  */
+    padding-bottom: 88px;
+    margin: auto;
+  }
+
+  &__booton{
+    text-align: center;
+  }
+}
+
+.logo{
+  display: inline-block;                          /*  делаем  елемент  блочным  */
+  margin: 0;
+  padding: 0;
+  text-decoration: none ;                         /*  убераем  подчеркивание  */
+  font-family: 'Montserrat';                      /* выбираем  необходимый  шрифт */
+  font-weight: 700;                               /* выбираем  жирность  шрифта */
+  font-size: $fonts-logo;                         /* выбираем  размер  для  шрифта */
+  line-height: 30px;                              /*  размер  строковой  линии  */
+  color: $color-logo;                             /* указываем  цвет  для  шрифта */
+}
+
+.menu{
+  margin: 0;
+  padding: 0;
+  width: 620px;
+  list-style: none;                                /* убераем точки */
+  display: flex; 
+  justify-content: space-between;                  /* растянуть */ 
+
+  &__btn{
+    display: inline-block; 
+    font-family: 'Montserrat';                     /* название одно */
+    font-weight: 400;                              /* жирность */
+    font-size: $fonts-heder-meny;                  /* размер  шрифта  текста  */ 
+    line-height: 14px;                             /*  размер  строковой  линии  */
+    text-transform: uppercase ;                    /*  зделать  текст  с  большой  буквой  */
+    text-decoration: none ;                        /*  убераем  подчеркивание  */
+    color: $color-meny;                            /*  цвет  текста  */
+    transition: color  200ms linear, border  200ms linear;                /*  плавная задержка  */
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.0);
+
+    &:focus,
+    &:hover{
+      color: $color-meny-activ;
+      border-bottom: 3px solid $color-meny-activ;
+    }
+  }
+
+  &__svg{
+    width: 22px;
+    height: 22px;
+  }
+
+  &__img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    fill: $color-meny;
+
+    &:focus,
+    &:hover{
+      fill: $color-meny-activ;
+    }
+  }
+}
+
+.booton{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 154px;
+  height: 34px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: $fonts-heder-booton;                       /* выбираем  размер  для  шрифта */
+  line-height: 34px;                  /*  размер  строковой  линии  */
+  text-decoration: none;              /*  убераем  подчеркивание  */
+  color: $color-header-booton;                      /* указываем  цвет  для  шрифта */
+  text-transform: uppercase ;          /*  зделать  текст  с  большой  буквой  */
+  text-align: center;
+  background-color: none;
+  border: 3px solid $color-header-booton-border; 
+  transition: color  200ms linear, border  200ms linear;   /*  плавная задержка  */
+
+  &:focus,
+  &:hover{
+    color: $color-header-booton-activ;                      /* указываем  цвет  для  шрифта */
+    border: 3px solid $color-header-booton-activ;
+  }
+}

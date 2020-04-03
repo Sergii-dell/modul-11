@@ -1,0 +1,95 @@
+.section-service{                          
+  padding-top: 47px;
+  padding-bottom: 14px;
+
+  &__wrapper{
+    margin-bottom: 49px;
+  }
+}
+
+.caption{
+  margin: 0;
+  padding: 0;
+  display: block;                        /*  делаем  елемент  блочным  */
+  font-family: 'Montserrat';             /* выбираем  необходимый  шрифт */
+  font-weight: 700;                      /* выбираем  жирность  шрифта */
+  font-size: $fonts-caption;                       /* выбираем  размер  для  шрифта */
+  text-transform: uppercase ;          /*  зделать  текст  с  большой  буквой  */
+  line-height: 60px;                  /*  размер  строковой  линии  */
+  color: $color-caption-text;            /* указываем  цвет  для  шрифта */
+  text-align: center;
+  
+  &::after{
+    display: block;                            /* делаем  елемент  блочным */
+    content: '';                             /*  создайом  пустой контент  */
+    padding: 0;
+    margin: 0;
+    width: 60px;                            /*  задайом  ширину */
+    height: 3px;                             /*  задайом  высоту  */
+    background-color: $color-caption-after;               /* задайом цвет заливки контента */
+    margin: 0  auto;                           /*  устанавливаем  блок  по  центру  ширины  */
+    margin-top: 24px;
+  }
+
+  &__text{ 
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: 'Kaushan Script', cursive;          /* название одно */
+    font-weight: 400;                    /* разный вес/жирность */
+    font-size: $fonts-caption-text;                     /* размер  шрифта  текста  */ 
+    line-height: 24px;                  /*  размер  строковой  линии  */
+    text-transform: none ;          /*  зделать  текст  с  большой  буквой  */
+    color: $color-caption-text;                    /* указываем  цвет  для  шрифта */
+    text-align: center;
+  }
+}
+                        
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;      /*  растянуть  елементы  равномерно  */
+  list-style: none;                    /*  убераем  оформление  списка  ( точки )  */
+  margin: 0;
+  padding: 0;
+  
+  &__item{
+    position: relative;
+    width: 310px;                     /*  ширина  лишки контенера  */
+    padding-left: 90px;               /*  делаем левый падинг для картинки  */
+    margin-bottom: 78px;
+  }
+
+  &__img{
+    display: block;
+    position: absolute;
+    fill: $color-list-img;
+    top: 15px;
+    left: 29px;
+    width: 32px;
+    height: 32px;  
+  }
+
+  &__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';             /* выбираем  необходимый  шрифт */
+    font-weight: 400;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-list-title;                       /* выбираем  размер  для  шрифта */
+    text-transform: uppercase ;          /*  зделать  текст  с  большой  буквой  */
+    line-height: 44px;                  /*  размер  строковой  линии  */
+    color: $color-list-title;                      /* указываем  цвет  для  шрифта */
+  }
+
+  &__text{
+    margin: 0;
+    padding: 0;
+    display: block;                        /*  делаем  елемент  блочным  */
+    font-family: 'Roboto';                 /* выбираем  необходимый  шрифт */
+    font-weight: 400;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-list-text;                       /* выбираем  размер  для  шрифта */
+    text-transform: none;                  /*  зделать  текст  с  большой  буквой  */
+    line-height: 24px;                     /*  размер  строковой  линии  */
+    color: $color-list-text;                      /* указываем  цвет  для  шрифта */
+  }
+}

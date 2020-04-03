@@ -1,0 +1,175 @@
+.section-cards{
+  padding-bottom: 67px;
+  
+  &__wrapper{
+    margin-bottom: 40px;
+  }
+
+  &__quote{
+    margin: 0;
+    padding: 0;
+    display: block;                        /*  делаем  елемент  блочным  */
+    font-family: 'Roboto';          /* выбираем  необходимый  шрифт */
+    font-weight: 400;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-section-cards__quote;                       /* выбираем  размер  для  шрифта */
+    text-transform: none;          /*  зделать  текст  с  большой  буквой  */
+    line-height: 24px;                  /*  размер  строковой  линии  */
+    color: $color-section-cards__quote;                      /* указываем  цвет  для  шрифта */
+    width: 955px;                         /* ширина  контейнера */
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 85px;
+  }
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;      /*  растянуть  елементы  равномерно  */
+  list-style: none;                    /*  убераем  оформление  списка  ( точки )  */
+  margin: 0;
+  padding: 0;
+  
+  &__wrap{
+    width: 370px;
+    height: 460px;
+    border-right: 10px solid $color-cards__wrap;
+    border-bottom: 10px solid $color-cards__wrap;
+  }
+
+  &__item{
+    position: relative;
+    transition: 200ms linear;
+
+    &:focus,
+    &:hover{  
+      transform: translate( -10px, -10px);      /* перемещяем картинку на верх и лево на 10px */
+    }
+  }
+
+  &__img{
+    position: absolute;
+  }
+
+  &__socials{
+    position: absolute;
+    list-style: none;     /*  убераем  оформление  списка  ( точки )  */
+    width: 380px;
+    height: 470px;
+    background-image: linear-gradient(to top, rgba(242, 226, 145, 0.9),rgba(234, 138, 137, 0.9));
+    opacity: 0;
+    z-index: 0;
+    transition: 200ms linear;
+  }
+
+  &__item:hover .cards__socials--active,
+  &__item:focus .cards__socials--active{ 
+    opacity: 1;
+  }
+
+  &__feisbuk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 55px;
+    height: 56px;
+    border: 0;
+    background: $color-cards__link;                                    /*  убераем  фон  кнопки  */
+    top: 207px;
+    left: 78px;
+    z-index: 1;
+    transition: 200ms linear;
+  }  
+
+  &__link--active:focus,      /*  задайом  цвет  при  наведении  на  сылку  */
+  &__link--active:hover{             
+    background-color: $color-cards__link--active;                                            
+  }
+
+  &__link--active:focus,            /* задайом  цвет  при  наведении  на  сылку  */
+  &__link--active:hover .cards__icon--active{     
+    fill: $color-cards__icon--active;                    
+  }  
+   
+   
+  &__icon{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    fill: $color-cards__icon;
+  }
+
+  &__tviter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 55px;
+    height: 56px;
+    border: 0;
+    background: $color-cards__link;                                    /*  убераем  фон  кнопки  */
+    transition: 200ms linear;
+    top: 207px;
+    left: 134px;
+    z-index: 1;
+  }
+
+  &__pinterest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 55px;
+    height: 56px;
+    border: 0;
+    background: $color-cards__link;                                    /*  убераем  фон  кнопки  */
+    transition: 200ms linear;
+    top: 207px;
+    left: 190px;
+    z-index: 1;
+  }
+
+  &__instagram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 55px;
+    height: 56px;
+    border: 0;
+    background: $color-cards__link;                                    /*  убераем  фон  кнопки  */
+    transition: 200ms linear;
+    top: 207px;
+    left: 246px;
+    z-index: 1;
+  }
+
+  &__title{
+    margin: 0;
+    padding: 0;
+    display: block;                        /*  делаем  елемент  блочным  */
+    font-family: 'Montserrat';             /* выбираем  необходимый  шрифт */
+    font-weight: 400;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-cards__title;                       /* выбираем  размер  для  шрифта */
+    text-transform: uppercase;          /*  зделать  текст  с  большой  буквой  */
+    line-height: 14px;                  /*  размер  строковой  линии  */
+    color: $color-cards__title;                      /* указываем  цвет  для  шрифта */
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  &__text{
+    margin: 0;
+    padding: 0;
+    display: block;                        /*  делаем  елемент  блочным  */
+    font-family: 'Roboto';             /* выбираем  необходимый  шрифт */
+    font-weight: 300;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-cards__text;                       /* выбираем  размер  для  шрифта */
+    font-style: italic;
+    text-transform: none;          /*  зделать  текст  с  большой  буквой  */
+    line-height: 43px;                  /*  размер  строковой  линии  */
+    color: $color-cards__text;                      /* указываем  цвет  для  шрифта */
+    text-align: center;
+  }
+}

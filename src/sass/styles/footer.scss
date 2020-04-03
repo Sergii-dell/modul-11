@@ -1,0 +1,76 @@
+.footer{                               /* FUTER */
+  display: flex;                                      
+  justify-content: space-between;      /*  растянуть  елементы  равномерно  */
+  border-top: 1px solid $color-footer;
+  
+  &__excerpt{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';             /* выбираем  необходимый  шрифт */
+    font-weight: 400;            /* жирность  */
+    line-height: 40px;          /*  размер  строковой  линии  */
+    font-size: $fonts-footer__excerpt;           /*  размер  шрифта  */
+    color: $color-footer__excerpt;            /*  цвет  текста  */
+    text-align: left;           /*  расположение  текста  в  контенере  по  ширене  */
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  &__link{
+    text-decoration: none ;        /*  убераем  подчеркивание  */
+    color: $color-footer__link; 
+    transition: color  200ms linear;   /*  изменение с задержкой  */
+    &:hover,                            /*  задайом  цвет  при  наведении  на  сылку  */
+    &:focus{      
+      color: $color-footer__link--active;
+    }
+  }
+
+  &__wrap{
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+}
+
+.form{
+  position: relative;
+   
+  &__text{
+    position: absolute;
+    width: 229px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid $color-form-border;
+    padding-left: 12px;
+    color: $color-form;
+    font-family: 'Roboto', sans-serif;             /* выбираем  необходимый  шрифт */
+    font-weight: 300;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-form__text;                      /* выбираем  размер  для  шрифта */
+    font-style: italic;
+    right: 149px;
+  }  
+
+  &__button{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border: 0;
+    background-color: $color-form-booton-background;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;            /* выбираем  необходимый  шрифт */
+    font-weight: 700;                      /* выбираем  жирность  шрифта */
+    font-size: $fonts-form-booton;                      /* выбираем  размер  для  шрифта */
+    text-transform: uppercase;          /*  зделать  текст  с  большой  буквой  */
+    line-height: 14px;                  /*  размер  строковой  линии  */
+    color: $color-form-booton;
+    text-align: center;
+    transition: background-color 200ms linear;
+
+    &:hover,
+    &:focus{
+      background-color: $color-form-booton-background--active;
+    }
+  }
+}
+                            

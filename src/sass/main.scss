@@ -1,0 +1,20 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import './variables/heder.scss';
+@import './variables/section-1.scss';
+@import './variables/section-2.scss';
+@import './variables/footer.scss';
+@import './mixins/base.scss';
+
+@import 'reset.scss';
+@import 'fonts.scss';
+@import 'base.scss';
+
+@import './styles/heder.scss';
+@import './styles/section-1.scss';
+@import './styles/section-2.scss';
+@import './styles/footer.scss';
+
+@import 'media.scss';

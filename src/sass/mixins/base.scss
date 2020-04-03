@@ -1,0 +1,5 @@
+@mixin main-width($main-width){
+  width: ($main-width - 200) * 3;
+}
+  
+
